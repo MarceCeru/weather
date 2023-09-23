@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Humedad from './componentes/humedad';
+import IndiceUV from './componentes/indiceUV';
+import Viento from './componentes/viento';
+import AmanecerAtardecer from './componentes/amanecerAtardecer';
+import Visibilidad from './componentes/visibilidad';
+import CalidadDelAire from './componentes/calidadDelAire';
+import Maxima from './componentes/maxima';
+import Minima from './componentes/minima';
+import TemperaturaActual from './componentes/temperaturaActual';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div id='primerfila'>
+      <IndiceUV />
+      <Viento/>
+      <Humedad/>
+      <TemperaturaActual/>
+    </div>
+
+    <div id='segundafila'>
+      <AmanecerAtardecer/>
+      <Visibilidad/>
+      <CalidadDelAire/>
+      <Maxima/>
+      <Minima/>
+    </div>
+
     </div>
   );
 }
