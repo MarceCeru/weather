@@ -1,33 +1,80 @@
 .App {
   text-align: center;
   background-color: #61dafb;
+  height: 750px;
+}
+
+
+
+#temperatura{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 93%;
+  position: relative;
+  top: 5px;
+  left: 3%;
+  gap: 5px;
 }
 
 #primerfila{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 66.66%;
+  width: 92%;
+  position: relative;
+  top: 140px;
+  left: 5.75%;
+  gap: 5px;
 }
 
 #segundafila{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 83.33%;
+  width: 93.33%;
+  position: relative;
+  top: 120px;
+  left: 5%;
+  gap: 5px;
 }
 
-#tercerafila{
+#proyectos{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 50%;
+  position: relative;
+  top: 5px;
 }
 
+.grados{
+  font-size: 32px;
+  font-weight: bold;
+  padding: 8px 32px ;
+  height: 140px;
+  width: 200px;
+  position: relative;
+}
+
+.temperaturadeldia{
+  background-color:lightgoldenrodyellow;
+  width: 500px;
+  height: 140px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px ;
+  top: 60px;
+  position: relative;
+  text-align: left;
+  border-radius: 10px;
+}
+
+
 .temperatura{
-  width: 180px;
-  height: 180px;
-  font-size: 28px;
+  width: 150px;
+  height: 140px;
+  font-size: 20px;
   font-weight: bold;
   padding: 16px 16px ;
   top: 15px;
@@ -38,11 +85,11 @@
 
 .humedad{
   background-color:lightgoldenrodyellow;
-  width: 180px;
-  height: 180px;
-  font-size: 18px;
+  width: 120px;
+  height: 140px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 16px 16px ;
+  padding: 8px 8px ;
   top: 15px;
   position: relative;
   text-align: center;
@@ -51,11 +98,11 @@
 
 .amanecer{
   background-color:lightgoldenrodyellow;
-  width: 180px;
-  height: 180px;
-  font-size: 18px;
+  width: 120px;
+  height: 140px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 16px 16px ;
+  padding: 8px 8px ;
   top: 60px;
   position: relative;
   text-align: center;
@@ -64,11 +111,11 @@
 
 .viento{
   background-color:lightgoldenrodyellow;
-  width: 180px;
-  height: 180px;
-  font-size: 18px;
+  width: 120px;
+  height: 140px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 16px 16px ;
+  padding: 8px 8px ;
   top: 15px;
   position: relative;
   text-align: center;
@@ -77,11 +124,11 @@
 
 .recuadro{
   background-color:lightgoldenrodyellow;
-  width: 180px;
-  height: 180px;
-  font-size: 18px;
+  width: 120px;
+  height: 140px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 16px 16px ;
+  padding: 8px 8px ;
   top: 15px;
   position: relative;
   text-align: center;
@@ -92,11 +139,11 @@
 
 .calidaddelaire{
   background-color:lightgoldenrodyellow;
-  width: 180px;
-  height: 180px;
-  font-size: 18px;
+  width: 120px;
+  height: 140px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 16px 16px ;
+  padding: 8px 8px ;
   top: 60px;
   position: relative;
   text-align: center;
@@ -105,11 +152,11 @@
 
 .visibilidad{
   background-color:lightgoldenrodyellow;
-  width: 180px;
-  height: 180px;
-  font-size: 18px;
+  width: 120px;
+  height: 140px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 16px 16px ;
+  padding: 8px 8px ;
   top: 60px;
   position: relative;
   text-align: center;
@@ -118,11 +165,11 @@
 
 .maxima{
   background-color:orange;
-  width: 180px;
-  height: 180px;
-  font-size: 18px;
+  width: 120px;
+  height: 140px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 16px 16px ;
+  padding: 8px 8px ;
   top: 60px;
   position: relative;
   text-align: center;
@@ -131,11 +178,11 @@
 
 .minima{
   background-color:orange;
-  width: 180px;
-  height: 180px;
-  font-size: 18px;
+  width: 120px;
+  height: 140px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 16px 16px ;
+  padding: 8px 8px ;
   top: 60px;
   position: relative;
   text-align: center;
