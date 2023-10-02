@@ -1,11 +1,15 @@
 import './App.css';
+//import { ChakraBaseProvider } from '@chakra-ui/react';
 import Weather from './componentes/weather';
+//import * as React from 'react'
 
 function App(){
   return(
+   // <ChakraBaseProvider>
     <div id='proyectos'>
       <Weather/>
     </div>
+   // </ChakraBaseProvider>
   )
 }
 /*
