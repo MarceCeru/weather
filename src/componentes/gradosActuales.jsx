@@ -1,11 +1,10 @@
 import React from "react"
-import jsonData from './data.json'
 
 
-export default function Grados(){
+export default function Grados({grados}){
     return(
-        <div class="grados">
-            <h1>{jsonData["hourly"][ "temperature_2m"][17]}°</h1>
+        <div className="grados">
+            <h1>{grados}°</h1>
         </div>
     )
 }

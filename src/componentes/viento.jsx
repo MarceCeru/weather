@@ -1,14 +1,14 @@
 import React from "react";
-import viento from './3D Ico_23.png';
-import jsonData from './data.json'
+import vientos from './3D Ico_23.png';
 
 
-export default function Viento(){
+
+export default function Viento({viento}){
     return(
-        <div class='viento'>
+        <div className='viento'>
            <h5>viento (km/h)</h5>
-            <h1>{jsonData["hourly"]["windspeed_10m"][17]}</h1>
-           <img src={viento} alt="" width='20px' height='20px'/>
+            <h1>{viento}</h1>
+           <img src={vientos} alt="" width='20px' height='20px'/>
           
         </div>
     )
