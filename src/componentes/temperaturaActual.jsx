@@ -3,7 +3,7 @@ import Imagenes from "./graficos";
 
 export default function TemperaturaActual(){
     return(
-        <div class='temperatura'>
+        <div className='temperatura'>
             <h4>Lunes, 17:00</h4>
             <Imagenes/>
         </div>

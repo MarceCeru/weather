@@ -25,7 +25,11 @@ function Weather() {
   const [viento, setViento] = useState(jsonData["hourly"]["windspeed_10m"][17]);
   const [amanecer, setAmanecer] = useState((jsonData['daily']['sunrise'])[0]);
   const [atardecer, setAtardecer] = useState((jsonData['daily']['sunset'])[0]);
-  
+  //const [tempXHora, setTempXHora] = useState(jsonData['hourly'][ "temperature_2m"].filter((value,index)=>index in[0,3,6,9,12,15,18,21]));
+ 
+  const [temp, setTemp] = useState({uno: (jsonData["hourly"][ "temperature_2m"])[0], dos:(jsonData["hourly"][ "temperature_2m"])[3],
+  tres:(jsonData["hourly"][ "temperature_2m"])[6], cuatro:(jsonData["hourly"][ "temperature_2m"])[9], cinco:(jsonData["hourly"][ "temperature_2m"])[12],
+  seis:(jsonData["hourly"][ "temperature_2m"])[15], siete:(jsonData["hourly"][ "temperature_2m"])[18], ocho:(jsonData["hourly"][ "temperature_2m"])[21]})
   return (
     <div className="App">
 
@@ -33,7 +37,7 @@ function Weather() {
 
     <div id='temperatura'>
       <TemperaturaActual grados={setGrados}/>
-      <GraficoDeBarras/>
+      <GraficoDeBarras temp={temp}/>
     </div>
 
     <div id='primerfila'>

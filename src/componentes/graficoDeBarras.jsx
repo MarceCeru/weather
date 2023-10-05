@@ -3,7 +3,7 @@ import { BarChart } from '@mui/x-charts/BarChart';
 import { px } from 'framer-motion';
 import React from "react";
 
-export default function GraficoDeBarras(){
+export default function GraficoDeBarras({temp}){
     return(
         <div id='graficodebarras'>
             <BarChart
@@ -17,7 +17,8 @@ export default function GraficoDeBarras(){
   ]}
   series={[
     {
-      data: [18, 15, 8, 12, 25, 28, 27, 23],
+     data: [(temp.uno), (temp.dos),(temp.tres), (temp.cuatro), (temp.cinco),(temp.seis),(temp.siete),(temp.ocho)],
+    // data:[tempXHora],
     },
   ]}
   width={450}
