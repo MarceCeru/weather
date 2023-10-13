@@ -12,7 +12,7 @@ import Minima from './minima';
 import TemperaturaActual from './temperaturaActual';
 import Grados from './gradosActuales';
 import GraficoDeBarras from './graficoDeBarras';
-//import jsonData from './data.json';
+import jsonData from './data.json';
 import jsonData2 from './databis.json';
 
 /*function Datos(){
@@ -41,7 +41,7 @@ import jsonData2 from './databis.json';
 
 function Weather() {
 
-  const [jsonData, setJsonData3] = useState(null);
+  const [jsonData3, setJsonData3] = useState(null);
   const [error, setError] = useState(null);
 
   /* const url='https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relativehumidity_2m,weathercode,visibility,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max&timezone=America%2FSao_Paulo&forecast_days=1'
@@ -112,9 +112,12 @@ function Weather() {
   }, []
 
   );
-
    console.log(jsonData);*/
-   useEffect(() => {
+
+
+
+
+  /* useEffect(() => {
 
     const datos = async () => {
       const url = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,windspeed_10m_max&timezone=America%2FSao_Paulo&forecast_days=1';
@@ -124,7 +127,7 @@ function Weather() {
       });
     }
     datos();
-  }, []);
+  }, []);*/
 
   const [maxima, setMaxima] = useState(jsonData["daily"]["temperature_2m_max"]);
   const [minima, setMinima] = useState(jsonData["daily"]["temperature_2m_min"][0]);
