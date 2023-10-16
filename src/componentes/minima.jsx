@@ -6,7 +6,7 @@ export default function Minima({minima}){
     return(
         <div className='minima'>
         <h1>
-        {minima} C
+        {minima}°
         </h1>
            <h6>Minima</h6>
            <img src={Luna} alt="" width='25px' height='25px' />
