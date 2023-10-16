@@ -1,13 +1,10 @@
 import React from "react";
-//import Imagenes from "./graficos";
 import nublado from './cloudy.png';
 import despejado from './clear-day.png';
 import parcialNublado from './partly-cloudy-day.png'
 import lluvia from './heavy-showers (1).png'
 import nieve from './snow.png'
 
-
- 
 
 export default function TemperaturaActual({codigo}){
 
@@ -68,7 +65,15 @@ export default function TemperaturaActual({codigo}){
                         <h5>Nieve</h5>
                     </div>
                 )
-            }else{
+            }else if(codigo === 80){
+                return(
+                    <div>
+                        <img src={lluvia} alt="" width='200px' height='200px'/>
+                        <h5>Tormenta</h5>
+                    </div>
+                )
+            
+            }else {
             return(
                 <>
                 <h1>S/D</h1>

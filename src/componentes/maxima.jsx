@@ -1,9 +1,8 @@
 import React from "react";
 import sol from './Frame 6.png';
-//import jsonData from './data.json';
 
 export default function Maxima({maxima}) {
-  
+  console.log(maxima)
     return(
         <div className='maxima'> 
             <h1>{maxima}</h1>

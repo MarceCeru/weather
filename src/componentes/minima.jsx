@@ -2,7 +2,6 @@
 import React from "react";
 import Luna from './Frame 7.png';
 
-
 export default function Minima({minima}){
     return(
         <div className='minima'>
