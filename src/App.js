@@ -1,11 +1,15 @@
 import './App.css';
 import Weather from './componentes/weather';
 //import * as React from 'react'
+import { MapContainer } from 'react-leaflet';
+import Transito from './componentes/Transito';
+
 
 function App(){
   return(
     <div id='proyectos'>
-      <Weather/>
+    <Weather/>
+    <Transito/>
     </div>
   )
 }

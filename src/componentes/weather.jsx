@@ -31,9 +31,13 @@ function Weather() {
   }, []);
   console.log(data);
 
+  
+
+ 
+
+
   let hora = new Date();
   let horaSola = (hora.toString()).slice(16,18);
-  console.log(horaSola);
 
   return (
     <div className="App">

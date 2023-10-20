@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Parcialnublado from "./partly-cloudy.png";
 
 export default function Imagenes(){
@@ -7,4 +7,4 @@ export default function Imagenes(){
           <img src={Parcialnublado} alt="" width='100px' height='100px'/>
         </div>
     )
-}
+}*/
