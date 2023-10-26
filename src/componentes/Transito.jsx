@@ -2,34 +2,44 @@ import { MapContainer, TileLayer, useMap, Popup, Marker } from 'react-leaflet'
 import lineas from "./lineas.json";
 import { useState } from 'react';
 import { useEffect } from 'react';
-import colectivo from "./Icono-autobús-rojo.svg"
 import { Icon } from "leaflet";
+import bus from "./autobus.png";
+
 
 
 
 export default function Transito() {
 
-  /* const [datotransporte, setDatotransporte] = useState('');
-  
+  const [data, setData] =useState(null);
+
   useEffect(() => {
-   async function fetchDatotransporte() {
-     const respuesta = await fetch('https://apitransporte.buenosaires.gob.ar/colectivos/feed-gtfs?client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6');
-     const datostranspJson = await respuesta.json();
-     setDatotransporte(datostranspJson);
-   }
-   
-  fetchDatotransporte();
-  },[]);
-  console.log(datotransporte);*/
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://datosabiertos-transporte-apis.buenosaires.gob.ar:443/colectivos/vehiclePositionsSimple?agency_id=16&client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6');
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error('Error al realizar la solicitud:', error);
+      }
+    };
+
+    fetchData();
+
+    const fetchInterval = setInterval(fetchData, 31000);
+
+    
+  }, []);
+
+
+ /* useEffect(()=>{
+    llamadaApi
+  },[lineacolectivo]);*/
 
 
   const icon = new Icon({
-    iconUrl: colectivo,
-    iconSize: [25, 25]
+    iconUrl: bus,
+    iconSize: [26, 26]
   });
-
-
-
 
   return (
     <div>
@@ -38,7 +48,7 @@ export default function Transito() {
           attribution='&copy; <a href="https://www.openstreetm,ap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {lineas.map((item, index) => {
+        {data.map((item, index) => {
           return (<Marker position={[item["latitude"], item["longitude"]]}
             icon={icon} >
             <Popup>
