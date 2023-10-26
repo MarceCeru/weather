@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, useMap, Popup, Marker } from 'react-leaflet'
+import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet'
 import lineas from "./lineas.json";
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -10,7 +10,7 @@ import bus from "./autobus.png";
 
 export default function Transito() {
 
-  const [data, setData] =useState(null);
+  const [data, setData] =useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +26,8 @@ export default function Transito() {
     fetchData();
 
     const fetchInterval = setInterval(fetchData, 31000);
-
+   
+    return () => clearInterval(fetchInterval);
     
   }, []);
 
@@ -48,7 +49,7 @@ export default function Transito() {
           attribution='&copy; <a href="https://www.openstreetm,ap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {data.map((item, index) => {
+         {data && data.map((item, index) => { 
           return (<Marker position={[item["latitude"], item["longitude"]]}
             icon={icon} >
             <Popup>
