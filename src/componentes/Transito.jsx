@@ -31,7 +31,7 @@ export default function Transito() {
     const fetchInterval = setInterval(fetchData, 31000);
     return () => clearInterval(fetchInterval);
   }, []);
-  console.log(data);
+ // console.log(data);
 
   const objetos = data;
   let objetosFiltrados = objetos;
