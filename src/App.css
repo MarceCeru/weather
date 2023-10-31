@@ -60,6 +60,15 @@
   top: 5px;
 }
 
+#selects{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  top: 5px;
+}
+
 #graficodebarras{
  background-color:orange;
  border-radius: 10px;

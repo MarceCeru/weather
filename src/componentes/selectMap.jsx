@@ -6,12 +6,12 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 //import { useState } from 'react';
 
-export default function SelectLabels({line, setLine}) {
+export default function SelectLabels({ line, setLine }) {
 
 
- // const [line, setLine] = React.useState('');
+  // const [line, setLine] = React.useState('');
 
- const handleChange = (event) => {
+  const handleChange = (event) => {
     setLine(event.target.value);
   };
 
@@ -26,19 +26,20 @@ export default function SelectLabels({line, setLine}) {
           label="Line"
           onChange={handleChange}
         >
-         <MenuItem value="">  
+          <MenuItem value="">
           </MenuItem>
           <MenuItem value={1}>TODAS</MenuItem>
           <MenuItem value={10}>21A</MenuItem>
           <MenuItem value={20}>21B</MenuItem>
+          <MenuItem value={21}>21D</MenuItem>
           <MenuItem value={30}>21E</MenuItem>
           <MenuItem value={40}>21F</MenuItem>
           <MenuItem value={50}>21G</MenuItem>
           <MenuItem value={60}>21J</MenuItem>
           <MenuItem value={70}>21I</MenuItem>
-          <MenuItem value={80}>10BA</MenuItem>
-        </Select>  
-      </FormControl>  
+          <MenuItem value={80}>108A</MenuItem>
+        </Select>
+      </FormControl>
     </div>
   );
 }
