@@ -63,7 +63,7 @@
 #selects{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 100%;
   position: relative;
   top: 5px;
