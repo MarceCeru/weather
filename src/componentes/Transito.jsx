@@ -14,8 +14,8 @@ export default function Transito() {
 
   const [line, setLine] = useState('');
   const [data, setData] = useState('');
-  //console.log(line);
-  // 'https://datosabiertos-transporte-apis.buenosaires.gob.ar:443/colectivos/vehiclePositionsSimple?agency_id=16&client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6'
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -31,9 +31,8 @@ export default function Transito() {
     const fetchInterval = setInterval(fetchData, 31000);
     return () => clearInterval(fetchInterval);
   }, []);
- // console.log(data);
 
-  const objetos = data;
+  let objetos = data;
   let objetosFiltrados = objetos;
   if (line === 10) {
     objetosFiltrados = objetos && objetos.filter(objeto => objeto.route_short_name === "21A");
@@ -54,7 +53,8 @@ export default function Transito() {
   } else if (line === 80) {
     objetosFiltrados = objetos && objetos.filter(objeto => objeto.route_short_name === "108A");
   } else {
-  }
+  };
+
 
   /* useEffect(()=>{
      llamadaApi
@@ -65,12 +65,11 @@ export default function Transito() {
     iconUrl: bus,
     iconSize: [26, 26]
   });
-
+  //<SelectAutoWidth line={line}  />
   return (
     <div>
       <div id='selects'>
         <SelectLabels line={line} setLine={setLine} />
-        <SelectAutoWidth line={line} />
       </div>
       <MapContainer center={[-34.6389, -58.52276]} zoom={11} scrollWheelZoom={false}>
         <TileLayer
