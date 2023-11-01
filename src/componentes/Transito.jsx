@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { Icon } from "leaflet";
 import bus from "./autobus.png";
 import SelectLabels from './selectMap';
-import SelectAutoWidth from './selectDireccion';
 
 
 
