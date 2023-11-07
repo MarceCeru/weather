@@ -1,4 +1,14 @@
-.App {
+.App0 {
+  text-align: center;
+  background-color: #154451;
+  height: 99vh;
+  width: 100vh;
+  border-radius: 10px;
+  top: 1px;
+  position: relative; 
+}
+
+.App1 {
   text-align: center;
   background-color: #61dafb;
   height: 99vh;

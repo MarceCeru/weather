@@ -28,16 +28,16 @@ export default function SelectLabels({ line, setLine }) {
         >
           <MenuItem value="">
           </MenuItem>
-          <MenuItem value={1}>TODAS</MenuItem>
-          <MenuItem value={10}>21A</MenuItem>
-          <MenuItem value={20}>21B</MenuItem>
-          <MenuItem value={21}>21D</MenuItem>
-          <MenuItem value={30}>21E</MenuItem>
-          <MenuItem value={40}>21F</MenuItem>
-          <MenuItem value={50}>21G</MenuItem>
-          <MenuItem value={60}>21J</MenuItem>
-          <MenuItem value={70}>21I</MenuItem>
-          <MenuItem value={80}>108A</MenuItem>
+          <MenuItem  value={1}>TODAS</MenuItem>
+          <MenuItem  value={10}>21A</MenuItem>
+          <MenuItem  value={20}>21B</MenuItem>
+          <MenuItem  value={21}>21D</MenuItem>
+          <MenuItem  value={30}>21E</MenuItem>
+          <MenuItem  value={40}>21F</MenuItem>
+          <MenuItem  value={50}>21G</MenuItem>
+          <MenuItem  value={60}>21J</MenuItem>
+          <MenuItem  value={70}>21I</MenuItem>
+          <MenuItem  value={80}>108A</MenuItem>
         </Select>
       </FormControl>
     </div>

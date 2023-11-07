@@ -13,12 +13,16 @@ export default function Transito() {
 
   const [line, setLine] = useState('');
   const [data, setData] = useState('');
-
-
+  //const [agenciaId, setAgenciaId] = useState(16);
+  //'https://apitransporte.buenosaires.gob.ar/colectivos/vehiclePositionsSimple?client_id=cca22d39c3b54f5a8909640fd676b50b&client_secret=e1542937985B4bD1bbB4388459038d13&agency_id=${agencyId}'
+  //
   useEffect(() => {
+
     const fetchData = async () => {
+
+      // async function fetchData (agenciaId) {
       try {
-        const response = await fetch('https://apitransporte.buenosaires.gob.ar/colectivos/vehiclePositionsSimple?client_id=cca22d39c3b54f5a8909640fd676b50b&client_secret=e1542937985B4bD1bbB4388459038d13&agency_id=16');
+        const response = await fetch('https://apitransporte.buenosaires.gob.ar/colectivos/vehiclePositionsSimple?client_id=cca22d39c3b54f5a8909640fd676b50b&client_secret=e1542937985B4bD1bbB4388459038d13&agency_id=16')
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
