@@ -5,7 +5,7 @@
   width: 100vh;
   border-radius: 10px;
   top: 1px;
-  position: relative; 
+  position: relative;
 }
 
 .App1 {
@@ -18,17 +18,17 @@
   position: relative;
 }
 
-.leaflet-container{
+.leaflet-container {
   width: 100vh;
   height: 91vh;
   top: 1px;
   border-radius: 10px;
-  position:relative;
+  position: relative;
 }
 
 
 
-#temperatura{
+#temperatura {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -39,29 +39,29 @@
   gap: 5px;
 }
 
-#primerfila{
+#primerfila {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 92%;
   position: relative;
-  top: 75px;
+  top: 32px;
   left: 6%;
   gap: 5px;
 }
 
-#segundafila{
+#segundafila {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 93.33%;
-  position: relative;
-  top: 45px;
-  left: 5%;
+  position: absolute;
+  top: 503px;
+  left: 4.7%;
   gap: 5px;
 }
 
-#proyectos{
+#proyectos {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -70,36 +70,45 @@
   top: 5px;
 }
 
-#selects{
+#selects {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
   position: relative;
-  top: 5px;
+  top: 1px;
 }
 
-#graficodebarras{
- background-color:orange;
- border-radius: 10px;
+#selecProvincias {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  top: 1px;
 }
 
-.grados{
+#graficodebarras {
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.grados {
   font-size: 32px;
   font-weight: bold;
-  padding: 8px 32px ;
+  padding: 8px 32px;
   height: 140px;
   width: 200px;
   position: relative;
 }
 
-.temperaturadeldia{
-  background-color:lightgoldenrodyellow;
+.temperaturadeldia {
+  background-color: lightgoldenrodyellow;
   width: 500px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 12px ;
+  padding: 8px 12px;
   top: 60px;
   position: relative;
   text-align: left;
@@ -107,64 +116,64 @@
 }
 
 
-.temperatura{
+.temperatura {
   width: 150px;
   height: 140px;
   font-size: 20px;
   font-weight: bold;
-  padding: 16px 16px ;
-  top: 15px;
+  padding: 16px 16px;
+  top: 10px;
   position: relative;
   text-align: center;
   border: none;
 }
 
-.humedad{
-  background-color:lightgoldenrodyellow;
+.humedad {
+  background-color: lightgoldenrodyellow;
   width: 120px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 8px ;
+  padding: 8px 8px;
   top: 15px;
   position: relative;
   text-align: center;
   border-radius: 10px;
 }
 
-.amanecer{
-  background-color:lightgoldenrodyellow;
+.amanecer {
+  background-color: lightgoldenrodyellow;
   width: 120px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 8px ;
+  padding: 8px 8px;
   top: 60px;
   position: relative;
   text-align: center;
   border-radius: 10px;
 }
 
-.viento{
-  background-color:lightgoldenrodyellow;
+.viento {
+  background-color: lightgoldenrodyellow;
   width: 120px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 8px ;
+  padding: 8px 8px;
   top: 15px;
   position: relative;
   text-align: center;
   border-radius: 10px;
 }
 
-.recuadro{
-  background-color:lightgoldenrodyellow;
+.recuadro {
+  background-color: lightgoldenrodyellow;
   width: 120px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 8px ;
+  padding: 8px 8px;
   top: 15px;
   position: relative;
   text-align: center;
@@ -173,52 +182,52 @@
 
 
 
-.calidaddelaire{
-  background-color:lightgoldenrodyellow;
+.calidaddelaire {
+  background-color: lightgoldenrodyellow;
   width: 120px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 8px ;
+  padding: 8px 8px;
   top: 60px;
   position: relative;
   text-align: center;
   border-radius: 10px;
 }
 
-.visibilidad{
-  background-color:lightgoldenrodyellow;
+.visibilidad {
+  background-color: lightgoldenrodyellow;
   width: 120px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 8px ;
+  padding: 8px 8px;
   top: 60px;
   position: relative;
   text-align: center;
   border-radius: 10px;
 }
 
-.maxima{
-  background-color:orange;
+.maxima {
+  background-color: orange;
   width: 120px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 8px ;
+  padding: 8px 8px;
   top: 60px;
   position: relative;
   text-align: center;
   border-radius: 10px;
 }
 
-.minima{
-  background-color:orange;
+.minima {
+  background-color: orange;
   width: 120px;
   height: 140px;
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 8px ;
+  padding: 8px 8px;
   top: 60px;
   position: relative;
   text-align: center;
@@ -250,6 +259,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
