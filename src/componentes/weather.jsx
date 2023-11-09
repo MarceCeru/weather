@@ -95,6 +95,9 @@ function Weather() {
   } else if (provincia === 25) {
     latitude = -28.46957
     longitud = -65.78524;
+  } else if (provincia === 9) {
+    latitude = -26.18489	
+    longitud = -58.17313;
   }
 
 

@@ -2,7 +2,7 @@
   text-align: center;
   background-color: #154451;
   height: 99vh;
-  width: 100vh;
+  width: 104vh;
   border-radius: 10px;
   top: 1px;
   position: relative;
@@ -12,7 +12,7 @@
   text-align: center;
   background-color: #61dafb;
   height: 99vh;
-  width: 100vh;
+  width: 104vh;
   border-radius: 10px;
   top: 1px;
   position: relative;
@@ -74,7 +74,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 100%;
+  width: 104vh;
   position: relative;
   top: 1px;
 }
