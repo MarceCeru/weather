@@ -15,13 +15,49 @@ import GraficoDeBarras from './graficoDeBarras';
 import { CurtainsRounded } from '@mui/icons-material';
 import { circInOut } from 'framer-motion';
 import SelectCity from './selectWheaather';
+//import { position } from '@chakra-ui/react';
 
 function Weather() {
 
   const [data, setData] = useState('');
   const [provincia, setProvincia] = useState(6);
-  let latitude = -31.4135;
-  let longitud = -64.18105;
+  let latitude = null;
+  let longitud = null;
+
+ /* navigator.geolocation.getCurrentPosition(function(position){
+  
+    console.log('latitud es:', position.coords.latitude);
+    latitude = position.coords.latitude;
+    console.log('longitud es:', position.coords.longitude);
+    longitud = position.coords.longitude;   
+  });*/
+
+
+/*  const [latitudex, setLatitudex] = useState('');
+  const [longitudx, setLongitudx] = useState('');
+
+  useEffect(() => {
+    if ('geolocation' in navigator){
+      navigator.geolocation.getCurrentPosition(
+       (position) => {
+        const latitud = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        setLatitudex(latitud);
+        setLongitudx(longitude);
+      //  console.log(latitud);
+       }, 
+       (error) => {
+        console.error('Error al obtener ubicacion:', error.message);
+       }
+      );
+    }else {
+      setProvincia(6)
+    }
+    
+  }, []);
+ console.log(latitude);
+console.log(longitud);*/
+
 
   if (provincia === 1) {
     latitude = -34.61315
@@ -98,7 +134,7 @@ function Weather() {
   } else if (provincia === 9) {
     latitude = -26.18489	
     longitud = -58.17313;
-  }
+  } 
 
 
 
@@ -112,10 +148,12 @@ function Weather() {
       fetchDatos();
     }
   }, [latitude, longitud]);
+  //console.log(data);
 
   let hora = new Date();
   let horaSola = (hora.toString()).slice(16, 18);
-
+  horaSola = horaSola.substring(1, 2);
+  console.log(horaSola);
 
   if (data && data["current"] && data["current"]["is_day"] === 0) {
     return (
