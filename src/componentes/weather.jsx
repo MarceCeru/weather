@@ -152,7 +152,11 @@ console.log(longitud);*/
 
   let hora = new Date();
   let horaSola = (hora.toString()).slice(16, 18);
-  horaSola = horaSola.substring(1, 2);
+
+  if (horaSola<10){
+    horaSola = horaSola.substring(1, 2);
+  }
+  
   console.log(horaSola);
 
   if (data && data["current"] && data["current"]["is_day"] === 0) {
