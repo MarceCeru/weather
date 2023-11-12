@@ -147,6 +147,8 @@ console.log(longitud);*/
     if (provincia !== '') {
       fetchDatos();
     }
+    const fetchInterval = setInterval(fetchDatos, 180000);
+    return () => clearInterval(fetchInterval);
   }, [latitude, longitud]);
   //console.log(data);
 
