@@ -24,39 +24,39 @@ function Weather() {
   let latitude = null;
   let longitud = null;
 
- /* navigator.geolocation.getCurrentPosition(function(position){
+  /* navigator.geolocation.getCurrentPosition(function(position){
+   
+     console.log('latitud es:', position.coords.latitude);
+     latitude = position.coords.latitude;
+     console.log('longitud es:', position.coords.longitude);
+     longitud = position.coords.longitude;   
+   });*/
+
+
+  /*  const [latitudex, setLatitudex] = useState('');
+    const [longitudx, setLongitudx] = useState('');
   
-    console.log('latitud es:', position.coords.latitude);
-    latitude = position.coords.latitude;
-    console.log('longitud es:', position.coords.longitude);
-    longitud = position.coords.longitude;   
-  });*/
-
-
-/*  const [latitudex, setLatitudex] = useState('');
-  const [longitudx, setLongitudx] = useState('');
-
-  useEffect(() => {
-    if ('geolocation' in navigator){
-      navigator.geolocation.getCurrentPosition(
-       (position) => {
-        const latitud = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        setLatitudex(latitud);
-        setLongitudx(longitude);
-      //  console.log(latitud);
-       }, 
-       (error) => {
-        console.error('Error al obtener ubicacion:', error.message);
-       }
-      );
-    }else {
-      setProvincia(6)
-    }
-    
-  }, []);
- console.log(latitude);
-console.log(longitud);*/
+    useEffect(() => {
+      if ('geolocation' in navigator){
+        navigator.geolocation.getCurrentPosition(
+         (position) => {
+          const latitud = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          setLatitudex(latitud);
+          setLongitudx(longitude);
+        //  console.log(latitud);
+         }, 
+         (error) => {
+          console.error('Error al obtener ubicacion:', error.message);
+         }
+        );
+      }else {
+        setProvincia(6)
+      }
+      
+    }, []);
+   console.log(latitude);
+  console.log(longitud);*/
 
 
   if (provincia === 1) {
@@ -132,9 +132,9 @@ console.log(longitud);*/
     latitude = -28.46957
     longitud = -65.78524;
   } else if (provincia === 9) {
-    latitude = -26.18489	
+    latitude = -26.18489
     longitud = -58.17313;
-  } 
+  }
 
 
 
@@ -150,16 +150,16 @@ console.log(longitud);*/
     const fetchInterval = setInterval(fetchDatos, 180000);
     return () => clearInterval(fetchInterval);
   }, [latitude, longitud]);
-  //console.log(data);
 
   let hora = new Date();
   let horaSola = (hora.toString()).slice(16, 18);
 
-  if (horaSola<10){
+  if (horaSola < 10) {
     horaSola = horaSola.substring(1, 2);
   }
-  
+
   console.log(horaSola);
+
 
   if (data && data["current"] && data["current"]["is_day"] === 0) {
     return (
@@ -190,7 +190,7 @@ console.log(longitud);*/
           <Grados grados={data && data["hourly"] && data["hourly"]["temperature_2m"] && data["hourly"]["temperature_2m"][horaSola]} />
           <IndiceUV indiceuv={data && data["daily"] && data["daily"]["uv_index_max"]} />
           <Viento viento={data && data["daily"] && data["hourly"]["wind_speed_10m"][horaSola]} />
-          <Humedad humedad={data && data["hourly"] && data["hourly"]["relativehumidity_2m"] && data["hourly"]["relativehumidity_2m"][horaSola]} />
+          <Humedad humedad={data && data["hourly"] && data["hourly"]["relative_humidity_2m"] && data["hourly"]["relative_humidity_2m"][horaSola]} />
         </div>
 
         <div id='segundafila'>
