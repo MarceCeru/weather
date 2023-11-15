@@ -16,6 +16,7 @@ import { CurtainsRounded } from '@mui/icons-material';
 import { circInOut } from 'framer-motion';
 import SelectCity from './selectWheaather';
 //import { position } from '@chakra-ui/react';
+//import CountrySelect from './selectPaises';
 
 function Weather() {
 
@@ -23,6 +24,10 @@ function Weather() {
   const [provincia, setProvincia] = useState(6);
   let latitude = null;
   let longitud = null;
+  /* const handleSelection = (selectedValue) => {
+     console.log(selectedValue.label);
+   };*/
+
 
   /* navigator.geolocation.getCurrentPosition(function(position){
    
@@ -84,8 +89,8 @@ function Weather() {
     latitude = -30.74179
     longitud = -59.64517;
   } else if (provincia === 10) {
-    latitude = -26.18489
-    longitud = -58.17313;
+    latitude = -24.2053341
+    longitud = -65.3467551;
   } else if (provincia === 11) {
     latitude = 12.45
     longitud = -86.95;
@@ -157,10 +162,8 @@ function Weather() {
   if (horaSola < 10) {
     horaSola = horaSola.substring(1, 2);
   }
-
-  console.log(horaSola);
-
-
+  // console.log(horaSola);
+  // <CountrySelect onSelectionChange={handleSelection} />
   if (data && data["current"] && data["current"]["is_day"] === 0) {
     return (
 
@@ -189,7 +192,7 @@ function Weather() {
         <div id='primerfila'>
           <Grados grados={data && data["hourly"] && data["hourly"]["temperature_2m"] && data["hourly"]["temperature_2m"][horaSola]} />
           <IndiceUV indiceuv={data && data["daily"] && data["daily"]["uv_index_max"]} />
-          <Viento viento={data && data["daily"] && data["hourly"]["wind_speed_10m"][horaSola]} />
+          <Viento viento={data && data["hourly"] && data["hourly"]["wind_speed_10m"][horaSola]} />
           <Humedad humedad={data && data["hourly"] && data["hourly"]["relative_humidity_2m"] && data["hourly"]["relative_humidity_2m"][horaSola]} />
         </div>
 
@@ -230,7 +233,7 @@ function Weather() {
           <Grados grados={data && data["hourly"] && data["hourly"]["temperature_2m"] && data["hourly"]["temperature_2m"][horaSola]} />
           <IndiceUV indiceuv={data && data["daily"] && data["daily"]["uv_index_max"]} />
           <Viento viento={data && data["daily"] && data["hourly"]["wind_speed_10m"][horaSola]} />
-          <Humedad humedad={data && data["hourly"] && data["hourly"]["relativehumidity_2m"] && data["hourly"]["relativehumidity_2m"][horaSola]} />
+          <Humedad humedad={data && data["hourly"] && data["hourly"]["relative_humidity_2m"] && data["hourly"]["relative_humidity_2m"][horaSola]} />
         </div>
 
         <div id='segundafila'>

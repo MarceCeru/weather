@@ -1,7 +1,7 @@
 import React from "react";
 import gota from './WeatherIcon - 1-17.png'
 
-export default function Humedad({ humedad }) {
+export default function Humedad({humedad}) {
   return (
     <div className='humedad'>
       <h5>humedad</h5>
